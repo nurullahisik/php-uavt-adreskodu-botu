@@ -14,7 +14,6 @@
    6. [Bina](#building)
    7. [İç Kapı](#door)
    8. [UAVT Kodundan Adres Getirme](#uavt)
-   9. [Sorgu Sonucu](#result)
 
 <a name="what-is-uavt"></a>
 ### Adres Kodu Nedir?
@@ -50,6 +49,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(0);
         $properties->setType("cities");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -59,6 +61,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(1);
         $properties->setType("district");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -68,6 +73,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(1757);
         $properties->setType("township_village");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -77,6 +85,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(65);
         $properties->setType("neighborhood");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -86,6 +97,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(176887);
         $properties->setType("street");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -95,6 +109,9 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(496093);
         $properties->setType("building");
+        
+        //result
+        print_r($object::create($properties)->getResult());
     ?>
 
 
@@ -105,6 +122,7 @@ composer install
         $properties->setId(8122892);
         $properties->setType("door");
         
+        //result
         print_r($object::create($properties)->getResult());
     ?>
     
@@ -115,14 +133,8 @@ composer install
         $properties = new AddressProperties();
         $properties->setId(1315919009);
         $properties->setType("uavt");
-    ?>
-    
-<a name="result"></a>
-### Sorgu Sonucu
-    <?php
+        
         //result
         print_r($object::create($properties)->getResult());
     ?>
-
-
-
+   
