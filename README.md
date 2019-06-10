@@ -21,14 +21,14 @@
 Adres kodu ülke sınırları içindeki tüm konutlara ait 10 haneli özel bir numaradır.
 
 <a name="links"></a>
-### Links
+### Linkler
 
 Adres kodu öğrenme sitesi (https://adreskodu.dask.gov.tr/)
 
 <a name="init"></a>
 ### Kurulum
 ```
-composer update
+composer install
 ```
 
 <a name="usage"></a>
