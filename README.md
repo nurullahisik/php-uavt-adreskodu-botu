@@ -19,10 +19,12 @@
 ### Adres Kodu Nedir?
 Adres kodu ülke sınırları içindeki tüm konutlara ait 10 haneli özel bir numaradır.
 
+Bu kütüphaneyi ayrıca il, ilçe, mahalle, köy, cadde-sokak vs gibi bilgileri sorgulamak içinde kullanabilirsiniz.
+
 <a name="links"></a>
 ### Linkler
 
-Adres kodu öğrenme sitesi (https://adreskodu.dask.gov.tr/)
+Adres kodunuzu öğrenmek için (https://adreskodu.dask.gov.tr/)
 
 <a name="init"></a>
 ### Kurulum
