@@ -1,7 +1,16 @@
 {
   "name": "dask/adres-kodu",
   "description": "PHP ile uavt adres kodu botu",
-  "require": {},
+ "license": "MIT",
+ "authors": [
+    {
+      "name": "Nurullah ISIK",
+       "email": "bmnurullah@gmail.com"
+    }
+  ],
+  "require": {
+      "php":">7.0"
+  },
   "autoload": {
     "psr-4": {
       "Dask\\AdresKodu\\": "src/"
