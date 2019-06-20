@@ -1,10 +1,5 @@
 # PHP ile uavt adres kodu botu
 
-**Package**
-```
-- https://packagist.org/packages/nurullah/uavt-adres-kodu
-```
-
 **İçerik**
 1. [Adres Kodu Nedir](#what-is-uavt)
 2. [Linkler](#links)
@@ -19,6 +14,12 @@
    6. [Bina](#building)
    7. [İç Kapı](#door)
    8. [UAVT Kodundan Adres Getirme](#uavt)
+
+
+**Package**
+```
+- https://packagist.org/packages/nurullah/uavt-adres-kodu
+```
 
 <a name="what-is-uavt"></a>
 ### Adres Kodu Nedir?
