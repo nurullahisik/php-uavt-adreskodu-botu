@@ -1,5 +1,10 @@
 # PHP ile uavt adres kodu botu
 
+**Package**
+```
+- https://packagist.org/packages/nurullah/uavt-adres-kodu
+```
+
 **İçerik**
 1. [Adres Kodu Nedir](#what-is-uavt)
 2. [Linkler](#links)
@@ -29,7 +34,7 @@ Adres kodunuzu öğrenmek için (https://adreskodu.dask.gov.tr/)
 <a name="init"></a>
 ### Kurulum
 ```
-composer install
+composer require nurullah/uavt-adres-kodu
 ```
 
 <a name="usage"></a>
