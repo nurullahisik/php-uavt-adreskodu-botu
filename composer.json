@@ -1,4 +1,7 @@
 {
+  "name": "Dask/AdresKodu",
+  "description": "PHP ile uavt adres kodu botu",
+  "require": {},
   "autoload": {
     "psr-4": {
       "Dask\\AdresKodu\\": "src/"
