@@ -18,7 +18,7 @@
 
 **Package**
 ```
-- https://packagist.org/packages/nurullah/uavt-adres-kodu
+- (https://packagist.org/packages/nurullah/uavt-adres-kodu)
 ```
 
 <a name="what-is-uavt"></a>
