@@ -7,6 +7,9 @@
  */
 
 namespace Dask\AdresKodu;
+
+use Dask\AdresKodu\Encoding;
+
 class HTMLParser
 {
     private $rows;
@@ -41,7 +44,7 @@ class HTMLParser
 
             $this->setResult([
                 'id'   => $id,
-                'name' => $name,
+                'name' => Encoding::convert($name),
                 'type' =>  $type
             ]);
         }
@@ -67,7 +70,7 @@ class HTMLParser
                 'building_number'    => $building_number,
                 'building_code'      =>  $building_code,
                 'building_site_name' =>  $building_site_name,
-                'building_name'      =>  $building_name
+                'building_name'      =>  Encoding::convert($building_name)
             ]);
 
         }
@@ -84,11 +87,11 @@ class HTMLParser
             $type        = $this->getValue($cols, 0);;
             $door_number = $this->getValue($cols, 1);;
             $id          = $this->getAttribute($cols, 2, 0);
-            $id          = str_replace(["showKod('", "');"], "", $id);
+            $id          = str_replace(["showKod('", "');", "showKodWithParam('"], "", $id);
 
             $this->setResult([
                 'uavt'        => $id,
-                'door_number' =>  $door_number,
+                'door_number' => $door_number,
                 'type'        => $type
             ]);
         }
@@ -105,11 +108,11 @@ class HTMLParser
             $type        = $this->getValue($cols, 0);
             $door_number = $this->getValue($cols, 1);
             $id          = $this->getAttribute($cols, 2, 0);
-            $id          = str_replace(["showKod('", "');"], "", $id);
+            $id          = str_replace(["showKod('", "');", "showKodWithParam('"], "", $id);
 
             $this->setResult([
                 'id'          => $id,
-                'door_number' =>  $door_number,
+                'door_number' => $door_number,
                 'type'        => $type
             ]);
         }
@@ -124,7 +127,10 @@ class HTMLParser
 
     private function getAttribute($cols, $col_index, $attr_index = 0)
     {
-        return $cols->item($col_index)->getElementsByTagName("a")->item($attr_index)->getAttribute("onclick");
+        if ( $cols->item($col_index) ) {
+            return $cols->item($col_index)->getElementsByTagName("a")->item($attr_index)->getAttribute("onclick");
+        }
+        return "";
     }
 
     private function setResult($result)

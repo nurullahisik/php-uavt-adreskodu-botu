@@ -7,6 +7,9 @@
  */
 
 namespace Dask\AdresKodu;
+
+use Dask\AdresKodu\Encoding;;
+
 class Curl
 {
     public function get($url, $header)
@@ -47,10 +50,19 @@ class Curl
         $error = curl_error($ch);
         curl_close($ch);
 
+        $encoding = mb_detect_encoding($response);
+
+        if ( $encoding == "UTF-8" ) {
+            $response = utf8_encode($response);
+
+            $response = Encoding::convert($response);
+        }
+
         return [
-            'status'  => empty($response) ? false : true,
-            'result'  => $response,
-            'message' => $error
+            'status'   => empty($response) ? false : true,
+            'result'   => $response,
+            'message'  => $error,
+            'encoding' => $encoding
         ];
     }
 
