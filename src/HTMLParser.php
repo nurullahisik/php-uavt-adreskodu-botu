@@ -45,7 +45,7 @@ class HTMLParser
             $this->setResult([
                 'id'   => $id,
                 'name' => Encoding::convert($name),
-                'type' =>  $type
+                'type' => Encoding::convert($type)
             ]);
         }
 
@@ -69,7 +69,7 @@ class HTMLParser
                 'id'                 => $id,
                 'building_number'    => $building_number,
                 'building_code'      =>  $building_code,
-                'building_site_name' =>  $building_site_name,
+                'building_site_name' =>  Encoding::convert($building_site_name),
                 'building_name'      =>  Encoding::convert($building_name)
             ]);
 
@@ -90,9 +90,9 @@ class HTMLParser
             $id          = str_replace(["showKod('", "');", "showKodWithParam('"], "", $id);
 
             $this->setResult([
-                'uavt'        => $id,
-                'door_number' => $door_number,
-                'type'        => $type
+                'uavt'        => Encoding::convert($id),
+                'door_number' => Encoding::convert($door_number),
+                'type'        => Encoding::convert($type)
             ]);
         }
 
@@ -111,9 +111,9 @@ class HTMLParser
             $id          = str_replace(["showKod('", "');", "showKodWithParam('"], "", $id);
 
             $this->setResult([
-                'id'          => $id,
-                'door_number' => $door_number,
-                'type'        => $type
+                'id'          => Encoding::convert($id),
+                'door_number' => Encoding::convert($door_number),
+                'type'        => Encoding::convert($type)
             ]);
         }
 
