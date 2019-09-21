@@ -84,15 +84,13 @@ class HTMLParser
 
             $cols = $row->getElementsByTagName('td');
 
-            $type        = $this->getValue($cols, 0);;
-            $door_number = $this->getValue($cols, 1);;
-            $id          = $this->getAttribute($cols, 2, 0);
+            $door_number = $this->getValue($cols, 0);;
+            $id          = $this->getAttribute($cols, 1, 0);
             $id          = str_replace(["showKod('", "');", "showKodWithParam('"], "", $id);
 
             $this->setResult([
                 'uavt'        => Encoding::convert($id),
                 'door_number' => Encoding::convert($door_number),
-                'type'        => Encoding::convert($type)
             ]);
         }
 
