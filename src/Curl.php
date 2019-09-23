@@ -68,9 +68,8 @@ class Curl
 
     private function certificate(& $options)
     {
-        if ( $_SERVER['REQUEST_SCHEME'] == 'http' ) {
-            $options[CURLOPT_CAINFO] = dirname(dirname(__FILE__)) . "/cacert.pem";
-        }
+        $options[CURLOPT_SSL_VERIFYPEER] = false;
+        $options[CURLOPT_SSL_VERIFYHOST] = false;
 
         return $options;
     }
