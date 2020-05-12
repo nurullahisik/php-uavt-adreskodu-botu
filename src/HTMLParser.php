@@ -25,9 +25,9 @@ class HTMLParser
         @$dom->loadHTML($html);
         $dom->preserveWhiteSpace = false;
         $tables = $dom->getElementsByTagName('tbody');
-
-        $this->rows = $tables->item(0)->getElementsByTagName('tr');
-
+        if(isset($tables->item(0))){
+            $this->rows = $tables->item(0)->getElementsByTagName('tr');
+        }
         return $this;
     }
 
