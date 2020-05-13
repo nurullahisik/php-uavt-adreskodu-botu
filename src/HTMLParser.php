@@ -12,7 +12,7 @@ use Dask\AdresKodu\Encoding;
 
 class HTMLParser
 {
-    private $rows;
+    private $rows = [];
     private $result;
     private $error = "";
 
@@ -25,8 +25,8 @@ class HTMLParser
         @$dom->loadHTML($html);
         $dom->preserveWhiteSpace = false;
         $tables = $dom->getElementsByTagName('tbody');
-        if(isset($tables->item(0))){
-            $this->rows = $tables->item(0)->getElementsByTagName('tr');
+        if($tables->length > 0) {
+			$this->rows = $tables->item(0)->getElementsByTagName('tr');
         }
         return $this;
     }

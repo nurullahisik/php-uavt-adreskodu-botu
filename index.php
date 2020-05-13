@@ -10,9 +10,9 @@ use Dask\AdresKodu\AddressInitialize;
 $object = new AddressInitialize();
 $object::init();
 
-$properties = new AddressProperties();
-$properties->setId(0);
-$properties->setType("cities");
+// $properties = new AddressProperties();
+// $properties->setId(0);
+// $properties->setType("cities");
 
 
 //$properties = new AddressProperties();
@@ -30,9 +30,9 @@ $properties->setType("cities");
 //$properties->setType("neighborhood");
 
 
-//$properties = new AddressProperties();
-//$properties->setId(176887);
-//$properties->setType("street");
+$properties = new AddressProperties();
+$properties->setId(8);
+$properties->setType("street");
 
 
 //$properties = new AddressProperties();
@@ -49,4 +49,7 @@ $properties->setType("cities");
 //$properties->setId(1315919009);
 //$properties->setType("uavt");
 
-print_r($object::create($properties)->getResult());
+$data = $object::create($properties);
+print_r($data->getResult());
+
+
