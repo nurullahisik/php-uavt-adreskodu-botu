@@ -41,7 +41,7 @@ composer require nurullah/uavt-adres-kodu
 <a name="usage"></a>
 ### Kullanım
     <?php
-        include __DIR__.'/vendor/autoload.php';
+        include 'vendor/autoload.php';
         
         use Dask\AdresKodu\AddressProperties;
         use Dask\AdresKodu\AddressInitialize;
