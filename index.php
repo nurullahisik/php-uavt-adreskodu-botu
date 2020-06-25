@@ -1,7 +1,7 @@
 <?php
 
 
-include __DIR__.'/vendor/autoload.php';
+include '/to/path/vendor/autoload.php';
 
 use Dask\AdresKodu\AddressProperties;
 use Dask\AdresKodu\AddressInitialize;
