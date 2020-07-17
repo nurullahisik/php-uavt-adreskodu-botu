@@ -40,109 +40,108 @@ composer require nurullah/uavt-adres-kodu
 
 <a name="usage"></a>
 ### Kullanım
-    <?php
-        include '/to/path/vendor/autoload.php';
-        
-        use Dask\AdresKodu\AddressProperties;
-        use Dask\AdresKodu\AddressInitialize;
-        
-        $object = new AddressInitialize();
-        $object::init();
-    ?>
+```php
+include '/to/path/vendor/autoload.php';
 
+use Dask\AdresKodu\AddressProperties;
+use Dask\AdresKodu\AddressInitialize;
+
+$object = new AddressInitialize();
+$object::init();
+```
 
 <a name="cities"></a>
 ### İller
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(0);
-        $properties->setType("cities");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(0);
+$properties->setType("cities");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="district"></a>
 ### İlçeler
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(1);
-        $properties->setType("district");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(1);
+$properties->setType("district");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="township_village"></a>
 ### Bucak-Köy
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(1757);
-        $properties->setType("township_village");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(1757);
+$properties->setType("township_village");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="neighborhood"></a>
 ### Mahalle
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(65);
-        $properties->setType("neighborhood");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+ ```php
+$properties = new AddressProperties();
+$properties->setId(65);
+$properties->setType("neighborhood");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="street"></a>
 ### Cadde-Sokak
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(176887);
-        $properties->setType("street");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(176887);
+$properties->setType("street");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="building"></a>
 ### Binalar
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(496093);
-        $properties->setType("building");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(496093);
+$properties->setType("building");
+
+//result
+print_r($object::create($properties)->getResult());
+```
 
 
 <a name="door"></a>
 ### İç Kapı
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(8122892);
-        $properties->setType("door");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(8122892);
+$properties->setType("door");
+
+//result
+print_r($object::create($properties)->getResult());
+```
     
 
 <a name="uavt"></a>
 ### UAVT Kodundan adres getirme
-    <?php
-        $properties = new AddressProperties();
-        $properties->setId(1315919009);
-        $properties->setType("uavt");
-        
-        //result
-        print_r($object::create($properties)->getResult());
-    ?>
+```php
+$properties = new AddressProperties();
+$properties->setId(1315919009);
+$properties->setType("uavt");
+
+//result
+print_r($object::create($properties)->getResult());
+```
    
