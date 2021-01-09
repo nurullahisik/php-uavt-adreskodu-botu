@@ -1,3 +1,5 @@
+## UYARI:  (https://adreskodu.dask.gov.tr/) adresi kapatıldığından bu bot çalışmayacaktır.
+
 # PHP ile uavt adres kodu botu
 
 **İçerik**
@@ -40,7 +42,7 @@ composer require nurullah/uavt-adres-kodu
 
 <a name="usage"></a>
 ### Kullanım
-```php
+```php 
 include '/to/path/vendor/autoload.php';
 
 use Dask\AdresKodu\AddressProperties;
